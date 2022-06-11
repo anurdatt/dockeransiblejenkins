@@ -7,12 +7,12 @@ pipeline{
       DOCKER_TAG = getVersion()
     }
     stages{
-        stage('SCM'){
-            steps{
-                git credentialsId: 'github', 
-                    url: 'https://github.com/anurdatt/dockeransiblejenkins'
-            }
-        }
+//         stage('SCM'){
+//             steps{
+//                 git credentialsId: 'github', 
+//                     url: 'https://github.com/anurdatt/dockeransiblejenkins'
+//             }
+//         }
         
         stage('Maven Build'){
             steps{
