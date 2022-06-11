@@ -29,7 +29,7 @@ pipeline{
         stage('DockerHub Push'){
             steps{
                 withCredentials([string(credentialsId: 'dockerhub', variable: 'dockerHubPwd')]) {
-                    sh "docker login -u anuran4u -p $dockerHubPwd"
+                    sh 'docker login -u anuran4u -p $dockerHubPwd'
                 }
                 
                 sh "docker push anuran4u/hariapp:${DOCKER_TAG} "
